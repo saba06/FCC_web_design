@@ -2,44 +2,58 @@
 <html>
     <style>
         body{
-            margin: 0;
+            display: flex;
             background-color: black;
             color: white;
         }
-        @media only screen and (max-width : 800px) {
-        }
         #navbar{
+            background-color: black;
+            display: flex;
             position: fixed;
-            margin-top: 0px;
-            margin-left: 0px;
-            width: 290px;
+            flex-direction: column;
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 250px;
+            border-right: 2px solid white;
         }
         #main-doc{
-            position: absolute;
-            margin-top: 0px;
-            margin-left: 290px;
-            border-left: 2px solid white;
+            position:relative;
+            margin-left: 250px;
+        }
+        @media only screen and (max-width : 800px) {
+            body{
+                flex-direction: column;
+            }
+            #navbar{
+                height: 250px;
+                width: 100%;
+                border-bottom: 2px solid white;
+                z-index: 1;
+            }
+            #main-doc{
+                position:relative;
+                margin-top: 290px;
+                margin-left: 0;
+            }
         }
 
         #header{
-            margin-top: 0px;
-            margin-left: 0px;
+            margin-top: 0;
+            margin-left: 0;
             font-size: x-large;
             font-weight: 500;
-            text-align: center;
+            text-align: left;
         }
         #navbar ul{
-            height: 90vh;
-            list-style-type: none;
-            list-style-position: outside;
+            padding: 0;
             overflow-x: hidden;
             overflow-y: auto;
-            border: 0.2px solid white;
         }
         #navbar ul li{
-            text-align: left;
+            list-style: none;
             padding: 1em;
-            border-bottom: 0.2px solid white;
+            border-top: 0.2px solid white;
         }
         .nav-link{
             text-decoration: none;
@@ -47,11 +61,22 @@
             font-size: medium;
         }
         .main-section{
-            min-height: 250px;
+            min-height: fit-content;
             margin: 1em;
+            font-size: medium;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         .main-section header{
-            font-size: large;
+            font-size: x-large;
+            font-weight: 700;
+            line-height: 1em;
+        }
+        .code{
+            white-space:pre-line;
+            color: yellow;
+        }
+        a{
+            color: white;
         }
     </style>
     <body>
@@ -75,10 +100,9 @@
             </ul>
         </nav>
         <main id="main-doc">
-            main content(technical documentation)
             <section class="main-section" id="Introduction">
                 <header>Introduction</header>
-                <p class="p-elements">
+                <p>
                     Python is a high-level programming language like java,C & C++. <br>
                     There are also low-level languages, sometimes referred to as “machine languages” or “assembly languages.” Loosely
                     speaking, computers can only run programs written in lowlevel languages. So programs written in a high-level language
@@ -88,7 +112,7 @@
                     The advantages are enormous. First, it is much easier to program in a high-level language.
                     Programs written in a high-level language take less time to write, they are shorter and
                     easier to read, and they are more likely to be correct. Second, high-level languages are
-                    portable, meaning that they can run on different kinds of computers with few or no modifications. Low-level programs
+                    portable, meaning that they can run on different kinds of computers with few or no modifications. Low-level programs
                     can run on only one kind of computer and have to be rewritten to run on another. <br>
                     Unlike java,C & C++ python is Loosely typed; it dosen't type-check before running the program ( some what simillar to javascript).<br>
                     Python is a interpreted language it dosen't need a compile a program; create a object code to run on machine like java. <br> 
@@ -96,7 +120,7 @@
                     interpreter. There are two ways to use the interpreter: interactive mode and script mode.
                     In interactive mode, you type Python programs and the interpreter displays the result: <br>
                     <code class="code">
-                        >>> 1 + 1 <br>
+                        >>> 1 + 1 
                         2
                     </code> 
                     <br>
@@ -141,7 +165,7 @@
             <section class="main-section" id="Hello_World">
                 <header>Hello World</header>
                 <code class="code">
-                    print('Hello World')<br>
+                    print('Hello World')
                 </code> <br>
                 Copy the above line of code into notepad or other code editor you have & save it with name 'Hello_World.py' . <br>
                 Open in same folder cmd promt type 'py Hello_World.py'or 'python Hello_World.py' depending on your version of python. <br>
@@ -154,12 +178,12 @@
                     <br>
                     If you give a variable an illegal name, you get a syntax error: (the following code is executed in python shell)<br>
                     <code class="code">
-                        >>> 76trombones = 'big parade'<br>
-                        SyntaxError: invalid syntax<br>
-                        >>> more@ = 1000000<br>
-                        SyntaxError: invalid syntax<br>
-                        >>> class = 'Advanced Theoretical Zymurgy'<br>
-                        SyntaxError: invalid syntax<br>
+                        >>> 76trombones = 'big parade'
+                        SyntaxError: invalid syntax
+                        >>> more@ = 1000000
+                        SyntaxError: invalid syntax
+                        >>> class = 'Advanced Theoretical Zymurgy'
+                        SyntaxError: invalid syntax
                     </code> <br>
                     76trombones is illegal because it does not begin with a letter. more@ is illegal because it
                     contains an illegal character, @. But what’s wrong with class? It turns out that class is one of Python’s keywords. The interpreter uses keywords to recognize the structure of the program, and they cannot be used as variable names. <br>
@@ -216,28 +240,28 @@
                 <header>Declaring variables</header>
                 <p>
                     <code class="code">
-                        x = 1<br>
-                        print(x)<br>
-                        x ="string"<br>
-                        print(x)<br>
-                        x = 1.24<br>
-                        print(x)<br>
-                    </code>
+                        x = 1
+                        print(x)
+                        x ="string"
+                        print(x)
+                        x = 1.24
+                        print(x)
+                    </code> <br>
                     Declaring variables very easy in python; use a valid identifier assign it any value using '=' operator. <br>
                     The above code prints the following output:
                     <code class="code">
-                        1<br>
-                        string<br>
-                        1.24<br>
+                        1
+                        string
+                        1.24
                     </code> <br>
                     Notice multiple assignments on same x. python dosen't flag error as x has no type assign to it. This is the loose typing we were talking about <br>
                     <code class="code">
-                        x,y= 1,"string"<br>
-                        print(x+y)<br>
+                        x,y= 1,"string"
+                        print(x+y)
                     </code> <br>
                     The above code prints an error at runtime;
                     <code class="code">
-                        TypeError: unsupported operand type(s) for +: 'int' and 'str'<br>
+                        TypeError: unsupported operand type(s) for +: 'int' and 'str'
                     </code> <br>
                     until this line is reached your code runs fine!
                 </p>
@@ -246,68 +270,163 @@
                 <header>Variable scope</header>
                 <p>
                     <code class="code">
-                        def func():<br>
-                            x=1<br>
-                            print("In func ",x)<br>
-                        x=11<br>
-                        print("x before func",x)<br>
-                        func()<br>
-                        print("x after func",x)<br>
-                    </code>
+                        def func():
+                            x=1
+                            print("In func ",x)
+                        x=11
+                        print("x before func",x)
+                        func()
+                        print("x after func",x)
+                    </code> <br>
                     What's the output of above code? Python has two scopes local & global. By default any variable defined has local scope until you use 'global' keyword when defining it. <br>
                     <code class="code">
-                        x before func 11<br>
-                        In func 1<br>
-                        x after func 11<br>
+                        x before func 11
+                        In func 1
+                        x after func 11
                     </code> <br>
                     x=1 when defined has local scope; meaning it is only visible in local function you define it in. When defined in func(); x is a new variable assign a value 1. Hence x defined outside func() is not not affected. Every function returns to main flow of program after execution; this is when the new x  =  1 is disposed after return. To learn more about functions click  <a href="#Function_declerations">here</a>. <br>
                     <code class="code">
-                        def func():<br>
-                            global x<br>
-                            x=1<br>
-                            print("In func ",x)<br>
-                        x=11<br>
-                        print("x before func",x)<br>
-                        func()<br>
-                        print("x after func",x)<br>
+                        def func():
+                            global x
+                            x=1
+                            print("In func ",x)
+                        x=11
+                        print("x before func",x)
+                        func()
+                        print("x after func",x)
                     </code> <br>
                     Just adding global keyword before x in func() enables us to access global variable  x (= 11) & change it to 1.Therfore the output. <br>
                     <code class="code">
-                        x before func 11<br>
-                        In func 1<br>
-                        x after func 1<br>
+                        x before func 11
+                        In func 1
+                        x after func 1
                     </code> <br>
                     Alternatively, you can define global x within func(). What's the output of following: <br>
                     <code class="code">
-                        def func(): <br>
-                            global x <br>
-                            x=1<br>
-                            print("In func ",x)<br>
-                        func()<br>
-                        print("x after func",x)<br>
+                        def func(): 
+                            global x 
+                            x=1
+                            print("In func ",x)
+                        func()
+                        print("x after func",x)
                     </code> <br>
                 </p>
             </section>
             <section class="main-section" id="Global_variables">
                 <header>Global variables</header>
+                <p>
+                    As defined in  <a href="#Variable scope">earlier section</a> a function defined with 'global' keyword has global scope; now variable declaration can be within a function or outside it! <br>
+                    For the last code snippet in earlier section the following is correct output: <br>
+                    <code class="code">
+                        In func 1
+                        x after func 1
+                    </code> <br>
+                    <em>Variables declared outside any function is implicitly global. Within a function you would have to use global keyword to declare a function global.</em>
+                </p>
             </section>
             <section class="main-section" id="Constants">
                 <header>Constants</header>
+                <p>
+                    We do not have constant declerations in python like in java! You just dont change the variable.In practice we use all caps when defining constant like java, by convention.
+                </p>
             </section>
             <section class="main-section" id="Data_types">
                 <header>Data types</header>
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg" alt="python data types scemantic diagram" style="display: block; margin: 0 auto; width: 50%;">
+                <p>
+                    There are 5 basic datatypes in python:
+                    <ol>
+                        <li>
+                            <p><em>Numeric:</em> is a number data type; consist of 3 subtypes integer,complex number & float.Yes, python has inherit data type complex numbers!</p>
+                        </li>
+                        <li>
+                            <p><em>Dictonary:</em> Dictionary in Python is an unordered collection of data values, used to store data values like a map, which unlike other
+                            Data Types that hold only single value as an element, Dictionary holds key:value pair. Key-value is provided in the
+                            dictionary to make it more optimized. Each key-value pair in a Dictionary is separated by a colon :, whereas each key is
+                            separated by a ‘comma’.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <em>Boolean:</em> Data type with one of the two built-in values, True or False. Boolean objects that are equal to True are truthy (true),
+                                and those equal to False are falsy (false). But non-Boolean objects can be evaluated in Boolean context as well and
+                                determined to be true or false. It is denoted by the class bool.
+                                Note – True and False with capital ‘T’ and ‘F’ are valid booleans otherwise python will throw an error.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <em>Set:</em> In Python, Set is an unordered collection of data type that is iterable, mutable and has no duplicate elements. The
+                                order of elements in a set is undefined though it may consist of various elements.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <em>Sequence:</em> In Python, sequence is the ordered collection of similar or different data types. Sequences allows to store multiple
+                                values in an organized and efficient fashion. There are several sequence types in Python –
+                            </p>
+                        </li>
+                    </ol>
+                    For more information on sub-types & to learn how to declare/use types <a href="https://www.geeksforgeeks.org/python-data-types/">Click here!</a>
+                </p>
             </section>
             <section class="main-section" id="if..else_statement">
                 <header>if..else statement</header>
+                <p>
+                    if..else in python is same as in other languages. The basic syntax is: <br>
+                    <code class="code">
+                        if (condition): 
+                            ...statment.. 
+                        else: 
+                            ..statment.. 
+                    </code> <br>
+                    In the below code always if statement is executed.
+                    <code class="code">
+                        if True:
+                            print("if statement executed") 
+                        else:
+                            print("else statement executed")
+                    </code> <br>
+                    The if-else-if statement has a slightly diffrent syntax:
+                    <code class="code">
+                        if (condition): 
+                            ..statment.. 
+                        elif (condition): 
+                            ...statment.. 
+                            .
+                            .
+                        else: ..statment.. 
+                    </code>
+                </p>
             </section>
             <section class="main-section" id="while_statement">
                 <header>while statement</header>
+                <p>
+                    syntax:
+                    <code class="code">
+                        while (condition):
+                            ..statment.. 
+                    </code> <br>
+                    statment executes until condition is True exits if false.
+                </p>
             </section>
             <section class="main-section" id="Function_declarations">
                 <header>Function declarations</header>
+                <p>
+                    syntax:
+                    <code class="code">
+                        def function_name(parameters):
+                            ..statment.. 
+                            [return value]
+                    </code> <br>
+                    Function is defined using keyword "def" followed by function name & parameters separated by ',' in brackets. The return statment is optional & can have one or more return values separated by ',' (it is returned as a tuple & must have equal number of values for assignment where called).
+                </p>
             </section>
             <section class="main-section" id="Reference">
                 <header>Reference</header>
+                <p>
+                    Think Python (book),<a href="https://www.geeksforgeeks.org/">geeksforgeeks</a>.
+                </p>
             </section>
         </main>
     </body>
