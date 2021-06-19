@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        @media only screen and (max-width : 800px) {
+        }
+        #navbar{
+            position: fixed;
+            margin-top: 0px;
+            margin-left: 0px;
+            width: 290px;
+        }
+        #main-doc{
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 290px;
+            border-left: 2px solid white;
+        }
+
+        #header{
+            margin-top: 0px;
+            margin-left: 0px;
+            font-size: x-large;
+            font-weight: 500;
+            text-align: center;
+        }
+        #navbar ul{
+            height: 90vh;
+            list-style-type: none;
+            list-style-position: outside;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border: 0.2px solid white;
+        }
+        #navbar ul li{
+            text-align: left;
+            padding: 1em;
+            border-bottom: 0.2px solid white;
+        }
+        .nav-link{
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+        }
+        .main-section{
+            min-height: 250px;
+            margin: 1em;
+        }
+        .main-section header{
+            font-size: large;
+        }
+    </style>
+    <body>
+        <nav id="navbar">
+            <header id="header">Python documentation</header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#Prerequisite" class="nav-link">Prerequisite</a></li>
+                <li><a href="#Python" class="nav-link">Python</a></li>
+                <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+                <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
+                <li><a href="#Global_variables" class="nav-link">Global variables</a></li>
+                <li><a href="#Constants" class="nav-link">Constants</a></li>
+                <li><a href="#Data_types" class="nav-link">Data types</a></li>
+                <li><a href="#if..else_statement" class="nav-link">if..else statement</a></li>
+                <li><a href="#while_statement" class="nav-link">while statement</a></li>
+                <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
+                <li><a href="#Reference" class="nav-link">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            main content(technical documentation)
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <p class="p-elements">
+                    Python is a high-level programming language like java,C & C++. <br>
+                    There are also low-level languages, sometimes referred to as “machine languages” or “assembly languages.” Loosely
+                    speaking, computers can only run programs written in lowlevel languages. So programs written in a high-level language
+                    have to be processed before
+                    they can run. This extra processing takes some time, which is a small disadvantage of
+                    high-level languages. <br>
+                    The advantages are enormous. First, it is much easier to program in a high-level language.
+                    Programs written in a high-level language take less time to write, they are shorter and
+                    easier to read, and they are more likely to be correct. Second, high-level languages are
+                    portable, meaning that they can run on different kinds of computers with few or no modifications. Low-level programs
+                    can run on only one kind of computer and have to be rewritten to run on another. <br>
+                    Unlike java,C & C++ python is Loosely typed; it dosen't type-check before running the program ( some what simillar to javascript).<br>
+                    Python is a interpreted language it dosen't need a compile a program; create a object code to run on machine like java. <br> 
+                    Python is considered an interpreted language because Python programs are executed by an
+                    interpreter. There are two ways to use the interpreter: interactive mode and script mode.
+                    In interactive mode, you type Python programs and the interpreter displays the result: <br>
+                    <code class="code">
+                        >>> 1 + 1 <br>
+                        2
+                    </code> 
+                    <br>
+                    The chevron, >>>, is the prompt the interpreter uses to indicate that it is ready. If you type
+                    1 + 1, the interpreter replies 2.
+                    Alternatively, you can store code in a file and use the interpreter to execute the contents of
+                    the file, which is called a script. By convention, Python scripts have names that end with
+                    .py. <br>
+                    In later section you ll get to know how to execute python scripts.
+                </p>
+            </section>
+            <section class="main-section" id="Prerequisite">
+                <header>Prerequisite</header>
+                <p>
+                    NO Prerequisite are needed to learn python! However if you know java or any other high-level programming you can skim through this documentation whith great easy! <br>
+                    Python has this great advantage that is lot easier both for beginners & other language programmers to learn.Code written in pyhton is a lot less verbose than written in java. <br>
+                    To execute & practice code you need to have python installed on your machine. <a href="https://www.python.org/downloads/">Click here </a> if you need help with it.
+                </p>
+            </section>
+            <section class="main-section" id="Python">
+                <header>Python</header>
+                <p>
+                    Keep this in mind as you learn python:
+                    <ul>
+                        <li>Python is interpreted language; it doesn't have compiler to warn syntax errors before you execute code! Syntax erros ll show up on runtime! (syntax is like grammer for programming language).</li>
+                        <li>
+                            Python is Loosely typed; it doesn't check for types until you run code in interpreter(also known as dynamic typing). So chances are you would have a lot of errors in beginning.
+                        </li>
+                        <li>
+                            Python is Object-Oriented programming. Python supports object-oriented language and concepts
+                            of classes, objects encapsulation, etc just like java & C++.
+                        </li>
+                        <li>
+                            Python has a  <a href="https://docs.python.org/3/library/index.html"> large standard library</a> which provides a rich set of module and functions so you do not have to write your
+                            own code for every single thing. There are many libraries present in python for such as regular expressions,
+                            unit-testing, web browsers, etc.
+                            Extensive open-source libraries exist in feilds of machine learning, web-development, data-science, gaming & many more!
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            <section class="main-section" id="Hello_World">
+                <header>Hello World</header>
+                <code class="code">
+                    print('Hello World')<br>
+                </code> <br>
+                Copy the above line of code into notepad or other code editor you have & save it with name 'Hello_World.py' . <br>
+                Open in same folder cmd promt type 'py Hello_World.py'or 'python Hello_World.py' depending on your version of python. <br>
+                This prints Hello World as output; this means you have sucessfully installed & run you first python script!
+            </section>
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
+                <p>
+                    Variables are symbolic name to store values; also called as identifiers must conform with certain rules;variable names can be arbitrarily long. They can contain both letters and numbers, but they have to begin with a letter. The underscore character, _, can appear in a name. It is often used in names with multiple words, such as my_name or airspeed_of_unladen_swallow. <br>
+                    <br>
+                    If you give a variable an illegal name, you get a syntax error: (the following code is executed in python shell)<br>
+                    <code class="code">
+                        >>> 76trombones = 'big parade'<br>
+                        SyntaxError: invalid syntax<br>
+                        >>> more@ = 1000000<br>
+                        SyntaxError: invalid syntax<br>
+                        >>> class = 'Advanced Theoretical Zymurgy'<br>
+                        SyntaxError: invalid syntax<br>
+                    </code> <br>
+                    76trombones is illegal because it does not begin with a letter. more@ is illegal because it
+                    contains an illegal character, @. But what’s wrong with class? It turns out that class is one of Python’s keywords. The interpreter uses keywords to recognize the structure of the program, and they cannot be used as variable names. <br>
+                    Python 2 has 31 keywords: <br>
+                    <table>
+                        <tr>
+                            <td>and</td>
+                            <td>as</td>
+                            <td>assert</td>
+                            <td>break</td>
+                            <td>class</td>
+                            <td>continue</td>
+                            <td>def</td>
+                        </tr>
+                        <tr>
+                            <td>del</td>
+                            <td>elif</td>
+                            <td>else</td>
+                            <td>except</td>
+                            <td>exec</td>
+                            <td>finally</td>
+                            <td>for</td>
+                        </tr>
+                        <tr>
+                            <td>from</td>
+                            <td>global</td>
+                            <td>if</td>
+                            <td>import</td>
+                            <td>in</td>
+                            <td>is</td>
+                            <td>lambda</td>
+                        </tr>
+                        <tr>
+                            <td>not</td>
+                            <td>or</td>
+                            <td>pass</td>
+                            <td>print</td>
+                            <td>raise</td>
+                            <td>return</td>
+                            <td>try</td>
+                        </tr>
+                        <tr>
+                            <td>while</td>
+                            <td>with</td>
+                            <td>yield</td>
+                        </tr>
+                    </table> <br>
+                    In Python 3, exec is no longer a keyword, but nonlocal is.
+                    You might want to keep this list handy. If the interpreter complains about one of your
+                    variable names and you don’t know why, see if it is on this list. <br>
+                </p>
+            </section>
+            <section class="main-section" id="Declaring_variables">
+                <header>Declaring variables</header>
+                <p>
+                    <code class="code">
+                        x = 1<br>
+                        print(x)<br>
+                        x ="string"<br>
+                        print(x)<br>
+                        x = 1.24<br>
+                        print(x)<br>
+                    </code>
+                    Declaring variables very easy in python; use a valid identifier assign it any value using '=' operator. <br>
+                    The above code prints the following output:
+                    <code class="code">
+                        1<br>
+                        string<br>
+                        1.24<br>
+                    </code> <br>
+                    Notice multiple assignments on same x. python dosen't flag error as x has no type assign to it. This is the loose typing we were talking about <br>
+                    <code class="code">
+                        x,y= 1,"string"<br>
+                        print(x+y)<br>
+                    </code> <br>
+                    The above code prints an error at runtime;
+                    <code class="code">
+                        TypeError: unsupported operand type(s) for +: 'int' and 'str'<br>
+                    </code> <br>
+                    until this line is reached your code runs fine!
+                </p>
+            </section>
+            <section class="main-section" id="Variable_scope">
+                <header>Variable scope</header>
+                <p>
+                    <code class="code">
+                        def func():<br>
+                            x=1<br>
+                            print("In func ",x)<br>
+                        x=11<br>
+                        print("x before func",x)<br>
+                        func()<br>
+                        print("x after func",x)<br>
+                    </code>
+                    What's the output of above code? Python has two scopes local & global. By default any variable defined has local scope until you use 'global' keyword when defining it. <br>
+                    <code class="code">
+                        x before func 11<br>
+                        In func 1<br>
+                        x after func 11<br>
+                    </code> <br>
+                    x=1 when defined has local scope; meaning it is only visible in local function you define it in. When defined in func(); x is a new variable assign a value 1. Hence x defined outside func() is not not affected. Every function returns to main flow of program after execution; this is when the new x  =  1 is disposed after return. To learn more about functions click  <a href="#Function_declerations">here</a>. <br>
+                    <code class="code">
+                        def func():<br>
+                            global x<br>
+                            x=1<br>
+                            print("In func ",x)<br>
+                        x=11<br>
+                        print("x before func",x)<br>
+                        func()<br>
+                        print("x after func",x)<br>
+                    </code> <br>
+                    Just adding global keyword before x in func() enables us to access global variable  x (= 11) & change it to 1.Therfore the output. <br>
+                    <code class="code">
+                        x before func 11<br>
+                        In func 1<br>
+                        x after func 1<br>
+                    </code> <br>
+                    Alternatively, you can define global x within func(). What's the output of following: <br>
+                    <code class="code">
+                        def func(): <br>
+                            global x <br>
+                            x=1<br>
+                            print("In func ",x)<br>
+                        func()<br>
+                        print("x after func",x)<br>
+                    </code> <br>
+                </p>
+            </section>
+            <section class="main-section" id="Global_variables">
+                <header>Global variables</header>
+            </section>
+            <section class="main-section" id="Constants">
+                <header>Constants</header>
+            </section>
+            <section class="main-section" id="Data_types">
+                <header>Data types</header>
+            </section>
+            <section class="main-section" id="if..else_statement">
+                <header>if..else statement</header>
+            </section>
+            <section class="main-section" id="while_statement">
+                <header>while statement</header>
+            </section>
+            <section class="main-section" id="Function_declarations">
+                <header>Function declarations</header>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+            </section>
+        </main>
+    </body>
+</html>
+<!-- js test script to test your code-->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+</script>

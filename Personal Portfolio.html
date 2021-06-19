@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+        body{
+            margin: 0;
+        }
+        #navbar{
+            width: 100%;
+            display: flex;  
+            position: fixed;
+            z-index: 1;
+            background-color: black;
+            justify-content: center;
+        }
+        #navbar a{
+            text-decoration: none;
+            margin: 0 2em 0 2em;
+            font-size: xx-large;
+            color: white;
+            font-weight: 500;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #welcome-section{
+            height: 100vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-color: rgba(255, 0, 0, 0.849);
+            color: white;
+            font-family: cursive;
+        }
+        #welcome-section h1{
+            text-align: center;
+            margin-top: 50vh;
+            font-size: xxx-large;
+        }
+        #welcome-section h6{
+            text-align: center;
+            font-size: large;
+            margin-top: 0;
+        }
+        #projects{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-color: gold;
+            color: black;
+            font-family: cursive;
+        }
+        #projects h6{
+            text-align: center;
+            font-size: large;
+        }
+        #project-grid{
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            justify-content: center;
+        }
+        .project-tile{
+            display: flex;
+            height: 200px;
+            margin-left: 1em;
+            margin-bottom: 1em;
+            flex: 0 1 200px;
+            box-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.37), 0.5px 0.5px 5px rgba(0, 0, 0, 0.60);
+        }
+        #contact{
+            height: 25vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: cursive;
+        }
+        #contact h6{
+            text-align: center;
+            font-size: large;
+        }
+        #contact a{
+            text-decoration: none;
+            font-size: medium;
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="navbar-div">
+            <nav id="navbar">
+                <a href="#welcome-section">Welcome</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        <section id="welcome-section">
+            <h1>Hi I am sandeep</h1>
+            <h6>new to FCC,but not to programming</h6>
+        </section>
+        <section id="projects">
+            <h6>my projects</h6>
+            <div id="project-grid">
+                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+            </div>
+        </section>
+        <section id="contact">
+            <h6>Let's work away from other (social<->distancing :D)</h6>
+            <a href="https://www.freecodecamp.org/_saba06" id="profile-link" target="_blank">FCC</a>
+        </section>
+    </body>
+</html>
+<!-- js test script to test your code-->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+</script>
