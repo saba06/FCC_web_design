@@ -21,6 +21,7 @@
             color: white;
             font-weight: 500;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: cursive;
         }
         #welcome-section{
             height: 100vh;
@@ -55,15 +56,34 @@
         }
         #project-grid{
             display: grid;
-            position: relative;
-            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-            justify-content: center;
+            grid-template-areas:
+                'tribute survey product tech_page';
+            gap: 1fr;
+        }
+        @media only screen and (max-width: 800px){
+        #project-grid{
+            display: grid;
+            grid-template-areas:
+                'tribute survey'
+                'product tech_page';
+            }    
+        }   
+        .tribute_area{
+            grid-area: tribute;
+        }
+        .survey_area{
+            grid-area: survey;
+        }
+        .product_area{
+            grid-area: product;
+        }
+        .tech_page_area{
+            grid-area: tech_page;
         }
         .project-tile{
             display: flex;
+            margin: 1em 1em 1em 1em;
             height: 200px;
-            margin-left: 1em;
-            margin-bottom: 1em;
             flex: 0 1 200px;
             box-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.37), 0.5px 0.5px 5px rgba(0, 0, 0, 0.60);
         }
@@ -102,12 +122,10 @@
         <section id="projects">
             <h6>my projects</h6>
             <div id="project-grid">
-                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
-                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
-                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
-                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
-                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
-                    <a href="" class="project-tile"><img src="" alt="Tribute page"></a>
+                    <a href="https://saba06.github.io/FCC_web_design/freecodecamp" class="project-tile tribute_area"><img src="" alt="Tribute page"></a>
+                    <a href="https://saba06.github.io/FCC_web_design/survey_form" class="project-tile survey_area"><img src="" alt="survey_form"></a>
+                    <a href="https://saba06.github.io/FCC_web_design/product_landing_page#order-form-div" class="project-tile product_area"><img src="" alt="product_landing_page"></a>
+                    <a href="https://saba06.github.io/FCC_web_design/technical%20docu%20page" class="project-tile tech_page_area"><img src="" alt="technical docu page"></a>
             </div>
         </section>
         <section id="contact">
