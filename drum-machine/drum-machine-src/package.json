@@ -1,4 +1,4 @@
-{
+{ "homepage": "https://saba06.github.io/FCC_web_design/drum-machine",
   "name": "drum-machine-src",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d build --dest drum-machine/drum-machine-page",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
