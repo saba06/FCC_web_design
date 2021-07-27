@@ -1,4 +1,5 @@
-{ "homepage": "https://saba06.github.io/FCC_web_design/drum-machine",
+{
+  "homepage": "https://saba06.github.io/FCC_web_design/drum-machine/drum-machine-page",
   "name": "drum-machine-src",
   "version": "0.1.0",
   "private": true,
@@ -36,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
