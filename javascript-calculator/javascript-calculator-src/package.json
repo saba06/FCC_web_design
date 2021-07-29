@@ -1,5 +1,5 @@
 {
-  "homepage": "https://saba06.github.io/FCC_web_design/JavaScript%20Calculator/javaScript-calculator-page",
+  "homepage": "https://saba06.github.io/FCC_web_design/javascript-calculator/javascript-calculator-page",
   "name": "javascript-calculator-src",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build --dest JavaScript Calculator/javaScript-calculator-page",
+    "deploy": "gh-pages -b main -d build --dest javascript-calculator/javascript-calculator-page",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
