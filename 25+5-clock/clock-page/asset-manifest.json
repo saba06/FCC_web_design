@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/FCC_web_design/25+5-clock/clock-page/static/css/main.07175539.chunk.css",
+    "main.js": "/FCC_web_design/25+5-clock/clock-page/static/js/main.c1867c53.chunk.js",
+    "main.js.map": "/FCC_web_design/25+5-clock/clock-page/static/js/main.c1867c53.chunk.js.map",
+    "runtime-main.js": "/FCC_web_design/25+5-clock/clock-page/static/js/runtime-main.4ede8e47.js",
+    "runtime-main.js.map": "/FCC_web_design/25+5-clock/clock-page/static/js/runtime-main.4ede8e47.js.map",
+    "static/js/2.e8c0656f.chunk.js": "/FCC_web_design/25+5-clock/clock-page/static/js/2.e8c0656f.chunk.js",
+    "static/js/2.e8c0656f.chunk.js.map": "/FCC_web_design/25+5-clock/clock-page/static/js/2.e8c0656f.chunk.js.map",
+    "index.html": "/FCC_web_design/25+5-clock/clock-page/index.html",
+    "static/css/main.07175539.chunk.css.map": "/FCC_web_design/25+5-clock/clock-page/static/css/main.07175539.chunk.css.map",
+    "static/js/2.e8c0656f.chunk.js.LICENSE.txt": "/FCC_web_design/25+5-clock/clock-page/static/js/2.e8c0656f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ede8e47.js",
+    "static/js/2.e8c0656f.chunk.js",
+    "static/css/main.07175539.chunk.css",
+    "static/js/main.c1867c53.chunk.js"
+  ]
+}
